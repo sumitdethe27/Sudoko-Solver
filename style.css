@@ -9,7 +9,12 @@ html,body{
     place-content: center
     ;
 }
-#solve{
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn{
     padding: 10px;
     cursor: pointer;
     border-radius: 8px;
@@ -17,7 +22,7 @@ html,body{
 }
 #sudoko{
     height: 612px;
-    width: 612px;
+    width: 618px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,4 +39,7 @@ html,body{
     font-size: 51px;
     font-weight: 700;
     border: 1px solid;
+}
+.ver{
+    border-right: 3px solid red; 
 }

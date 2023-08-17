@@ -19,20 +19,27 @@ function copiedarr(a){
 let body=document.querySelector("#sudoko");
 
 let clutter=""
-
+let bool=false
 function sudokofill(){
     for(let i=0;i<81;i++){
-    
-        clutter+=`<div class="box" id="box${i}"></div>`
-    
+        if((((i+1)%3)===0)&& i%3!==0){
+            clutter+=`<div class="box ver" id="box${i}"></div>`
+
+        }
+        else{
+            clutter+=`<div class="box" id="box${i}"></div>`
+
+        }    
     }
 }
 sudokofill();
 body.innerHTML=clutter
-
+function sudoko_content_fill(){
 let box=document.querySelectorAll(".box");
 box.forEach((item,indx)=>{
 const i=Math.floor(indx/9);
 const j=indx % 9;
 item.textContent=a[i][j]
 });
+}
+sudoko_content_fill();
